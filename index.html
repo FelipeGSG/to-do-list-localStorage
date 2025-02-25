@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-do List</title>
+</head>
+<body>
+    <h1>To-do list</h1>
+    <div>
+        <label>Insira uma tarefa</label><br>
+        <input type="text" id="newItem" placeholder="Digite uma nova tarefa"><br>
+        <div>
+            <button onclick="enviar()">Enviar</button>
+            <button onclick="mostrar()">Mostrar</button>
+        </div>
+    </div>
+    <br><br>
+    <div>
+        <input type="number" id="delete" placeholder="Digite um número"> <br>
+        <button onclick="deletar()">Deletar (Por número)</button>
+        <br><br>
+        <input type="checkbox" id="habilitar" onchange="habilitar()">
+        <label >Habilitar deletar todas as tarefas</label>
+        <br>
+        <button id="deletarTudo" disabled onclick="localStorage.clear();window.location.reload()">DELETAR TODAS AS TAREFAS</button>
+    </div>
+    <hr>
+    <br><br>
+    <div class="divLista">
+        <h2>Lista de tarefas:</h2>
+        <ul id="lista"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
